@@ -18,7 +18,7 @@ puts "111111"
 end
 puts "50 Usuários criados"
 
-100.times do
+1000.times do
   Person.create(
     name: Faker::Name.name,
     active: true,
@@ -27,9 +27,9 @@ puts "50 Usuários criados"
     phone_number: Faker::PhoneNumber.phone_number
   )
 end
-puts "100 Pessoas criadas"
 
-500.times do
+
+5000.times do
   Debt.create(
     observation: Faker::String.random(length: [0,40]),
     amount: Faker::Number.positive,
