@@ -9,7 +9,7 @@ class Person < ApplicationRecord
   validate :cpf_or_cnpj
 
   def balance
-    Rails.cache.fetch("#{cache_key_with_version }/balance", expires_in: 1.hour) do
+    Rails.cache.fetch("#{id }/balance", expires_in: 1.hour) do
       (payments.sum(:amount) - debts.sum(:amount))
     end
   end

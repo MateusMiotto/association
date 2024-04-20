@@ -82,5 +82,6 @@ group :test do
 end
 
 gem 'rails_performance'
+gem "chartkick"
 
 gem 'will_paginate', '~> 4.0'
